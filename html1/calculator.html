@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=dev,initial-scale=1.0">
+        <title>calculator</title>
+        <style>
+            .calculator {
+                width: 500px;
+                margin: 100px;
+                padding: 30px;
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 10px;
+                background-color: red;
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif';
+
+            }
+
+            .calculator input [type="text"]{
+                width: 85%;
+                padding: 12px;
+                margin: 10px;
+            }
+
+            .calculator input [type="submit"]{
+                padding:12px 18px ;
+                margin:6px ;
+                cursor: pointer;
+
+            }
+
+
+            #ans{
+                display: block;
+                margin-top: 20px;
+            font-size: 22px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+
+            <input id="a" type="text" name="a" placeholder="Enter first number">
+            <input id="b" type="text" name="b" placeholder="Enter second number">
+            <label id="ans"></label><br>
+            <input type="submit" onclick="add()" name="submit" value="add">
+            <input type="submit" onclick="sub()" name="submit" value="sub">
+            <input type="submit" onclick="multi()" name="submit" value="multi">
+            <input type="submit" onclick="div()" name="submit" value="div">
+              </div>
+
+    </body>
+    <script>
+
+
+
+        function add(){
+            const a = Number (document.querySelector('#a').value)
+            const b = Number(document.querySelector('#b').value)
+            const c=a+b;
+            const ans = document.querySelector('#ans')
+            ans.innerHTML =c
+        }
+
+        function sub(){
+            const a = Number (document.querySelector('#a').value)
+            const b= Number (document.querySelector('#b').value)
+            const c= a-b;
+            const ans= document.querySelector('#ans')
+            ans.innerHTML =c
+        }
+
+        function multi(){
+            const a= Number (document.querySelector('#a').value)
+            const b= Number (document.querySelector('#b').value)
+            const c= a*b;
+            const ans= document.querySelector('#ans')
+            ans.innerHTML =c
+        }
+
+        function div(){
+            var a= Number (document.querySelector('#a').value);
+            var b= Number (document.querySelector('#b').value);
+            var c= a/b;
+            const ans= document.querySelector('#ans');
+            ans.innerHTML =c;
+
+        }
+        </script>
+</html>

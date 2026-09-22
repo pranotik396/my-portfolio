@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const mydiv = document.createElement("div");
+        mydiv.style.color ='darkblue';
+        mydiv.style.backgroundColor='lightblue';
+        mydiv.style.height='200px';
+        mydiv.style.width='400px';
+        mydiv.style.padding='100px';
+        mydiv.style.fontSize='25px';
+        mydiv.style.border='2px solid blue';
+        const unlist= document.createElement("u1");
+        const languages =["Java","Python","PHP","c#"];
+         
+        languages.forEach(lang=>{
+            const li =document.createElement("li");
+            li.innerText=lang;
+            unlist.appendChild(li);
+        });
+        mydiv.appendChild(unlist);
+        document.body.appendChild(mydiv);
+    </script>
+</body>
+</html>

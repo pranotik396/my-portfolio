@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <style>
+           
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+
+
+body{
+                overflow-y: auto;
+            }
+
+            .video-container {
+                position: relative;
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                overflow: hidden;
+              overflow-y: auto;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .bg-video {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -2;
+                transform: translate(-50%,-50%);
+                object-fit: cover;
+            }
+
+            .video-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(41, 180, 188, 0.5);
+
+                z-index: -1;
+
+            }
+
+            .code-content {
+                position: relative;
+                z-index: 3;
+                color: #0a0502;
+
+
+
+                background: rgba(180, 209, 195, 0.85);
+                padding: 2rem;
+                border-radius: 8px;
+                font-family: 'Courier New', Courier, monospace;
+                max-width: 80%;
+                box-shadow: 0 10px 20px rgba(196, 210, 204, 0.5);
+                margin-top: 70px;
+                margin-left: 100px;
+                text-align: center;
+                font-size: 25px;
+                
+            }
+
+            .about {
+                position: relative;
+                z-index: 3;
+                color: white;
+
+            padding: 1%;
+            border-radius: 8px;
+            font-family: Lora;
+            max-width: 80%;
+            box-shadow: 0 10px 30px rgba(226, 219, 219, 0.5);
+            margin-top: 50px;
+            margin-left: 100px;
+            text-align: center;
+            font-size: 25px;
+
+            }
+
+            .profile-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 80px;
+
+            }
+
+            .profile-circle {
+                width: 220px;
+                height: 220px;
+                border-radius: 50px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border: 3px solid #d3e2e8;
+                margin-top: 80px;
+
+            }
+            h1{
+                font-family: Saira Semi Condensed;
+                font-size: 70px;
+                font-weight: 700;
+                color: rgb(225, 232, 234);
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            h2 {
+                font-family: Nova Round display;
+                font-size: 70px;
+                font-weight: 700;
+                color: rgb(84, 216, 192);
+                text-align: center;
+                margin-bottom: 1rem;
+            
+                }
+
+            h3{
+                font-family: New Amsterdam display;
+
+                font-size: 55px;
+                font-weight: 700;
+                color: rgb(34, 218, 14);
+                text-align: center;
+                margin-bottom: 1rem;
+                display: inline block;
+            }
+
+            h5{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 70px;
+                font-weight: 700;
+                color: rgba(163, 31, 193, 0.85);
+                text-align: center;
+                
+            }
+
+            h4{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 70px;
+                font-weight: 700;
+                color: cornflowerblue;
+                text-align: center;
+            
+            }
+
+
+            .navbar {
+                background-color: rgb(101, 166, 103);
+                padding: 20px;
+
+                overflow: hidden;
+                
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                box-sizing: border-box;
+            }
+
+            li{
+                align-items: start;
+            }
+
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                padding: 12px 12px;
+                font-size: 25px;
+            }
+
+            .navbar a:hover{
+                background-color: rgb(196, 177, 158);
+            }
+
+            .new-loop {
+                color: #38bdf3;
+                font-size: 1.6rem;
+                font-weight: 700;
+                text-decoration: none;
+                letter-spacing: 1px;
+
+            }
+
+            .education-section{
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            .header-container{
+                text-align: center;
+                margin-bottom: 40px;
+
+            }
+            .sub-title{
+                display: block;
+                font-size: 0.85rem;
+                letter-spacing: 3px;
+                color: rgb(12, 12, 12);
+                text-transform: uppercase;
+                margin-bottom: 5px;
+
+            }
+            .main-title{
+                font-size: 3rem;
+                font-weight: 700;
+                color: beige;
+                line-height: 1;
+                margin: 0;
+            }
+            .timeline{
+                border-left: 2px solid #38bdf3;
+                padding-left: 10px;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+
+            }
+            .timeline-item h2{
+                font-size: 1rem;
+                font-weight: 700;
+                color: #b3d759;
+                line-height: 1.2;
+                margin-bottom: 6px;
+            }
+            .timeline-item .sub-title{
+                font-size: 0.95rem;
+                color: cadetblue;
+                margin-bottom: 10px;
+                font-weight: 500;
+
+            }
+            .timeline-item .description{
+                font-size: 0.95rem;
+                color: chocolate;
+                line-height: 1.5;
+
+            }
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    padding: 20px;
+}
+
+section {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+h2 {
+    text-align: center;
+    color: #01320c;
+    margin-bottom: 20px;
+}
+
+.education-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.education-card,
+.skill-box,
+.skills,
+.Project-box,
+.Contact-box {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.education-card {
+    flex: 1;
+    min-width: 200px;
+}
+
+.skills,
+.skill-box {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.Project-box {
+    border-left: 5px solid #2563eb;
+}
+
+.Contact-box {
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+p {
+    margin: 6px 0;
+}
+
+span,
+samp {
+    color: green;
+    font-weight: bold;
+}
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+
+
+
+            <a href="Home">Home</a>
+            <a href="About">About</a>
+            <a href="Education">Education</a>
+            <a href="Skills">Skills</a>
+            <a href="Project">Project</a>
+            <a href="Contact">Contact</a>
+        </div>
+
+        <div class="profile-container">
+            <img src="profile.jpeg" alt="pranoti's profile picture" class="profile-circle">
+        </div>
+
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="bg-video">
+               <source src="bg.mp4" type="video/mp4" />
+            
+            
+            </video>
+           
+
+
+            <div class="video-overlay">
+                <nav>
+
+                </nav>
+                
+            </div>
+
+                    
+                     
+            <div class="code-content1">
+                <h1>Hi,I' am Pranoti</h1>
+            <h3>Computer Science Student</h3>
+        </div>
+        <br>
+        <div class="code-content">
+
+            <pre><code>
+
+
+             I am a passionate computer Science (BCS) student with a strong <br>
+             intrerst in web development and technology. I enjoy creating creative<br>
+             and user-friendly websites using HTML,CSS, and javascript.I am alwasy <br>
+             intrerstd in learning new skills,exploring new technologis,and <br>
+             improing my knowledge.My goal is to become a successful<br>
+             software developer and create useful projects for the future.<br>
+
+
+        </code></pre>
+
+        </div>
+        <h2>ABOUT</h2>
+        <div class="about">
+
+            <pre><code>
+
+                
+           I am a creative and hardworking student with an interest in<br>
+         computer technology, web designing and programming.<br>
+          I like exploring new ideas and learning new skills.<br>
+           My goal is to improve my knowledge, create useful projects,<br>
+           and build a successful career in the field of technology.<br>
+
+            </code></pre>
+        </div>
+        pre><code>
+
+            <section id="edu">
+           <h2>Education</h2>
+           
+           
+           <div class="education-container">
+            <div class="education-card">
+                <h3> Bachelor of Computer<br> Science</h3>
+                <p> KRP,collage,Ishwarpur</p>
+                <samp>Currently Studdying</samp>
+
+            </div>
+           
+
+           <div class="education-card">
+            <h3> Higher Secondary<br>Certificate</h3>
+                <p>Science Stream</p>
+                <span>Completed</span>
+           </div>
+
+           <div class="education-card">
+            <h3>Secondary School<br> Certificate
+            </h3>
+            <samp>Completed</samp>
+           </div>
+
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <h3> programming</h3>
+                <p>C  /  C ++</p>
+                <p>Java</p>
+                <p>Python</p>
+            
+            </div>
+
+            <div class="skill-box">
+                <h3> Web Development </h3>
+                <p>HTML</p>
+                <P> CSS</P>
+                <P>javaScript</P>
+
+            </div>
+
+            <div class="skill-box">
+                <h3> Database</h3>
+                <p>SQL</p>
+                    <p> MYSQL</p>
+                    <P>RDBMS</P>
+            </div>
+            <div class="skill-box">
+                <H3> Core Concepts</H3>
+                <p>OOP</p>
+                <p>Data Structure</p>
+                <p>DBMS</p>
+            </div>
+            
+            </section>
+
+            <section id="projects">
+                <h2> MY projects</h2>
+                <div class="Project-box">
+                    <p>A simple online shopping Website with products
+                        and attractive web pages.</p>
+                    <h3>E-Commerce Website</h3>
+                </div>
+                <div class="Project-box">
+                    <h3>calculator</h3>
+                    <p>
+                        A basic calculator created using HTML,CSS<br>
+
+                    </p>
+                </div>
+            </section>
+
+
+
+            <section id="Contact">
+
+
+                <h2>Contact Me</h2>
+                <div class="Contact-box">
+                    <h3>Let's connect</h3>
+                    <p>E-mail:pranotik396@.com</p>
+                    <p> phone:+91xxxxxxxxxx</p>
+                    <p> Location:Maharashtra,India</p>
+                </div>
+            </section>
+        
+
+
+        </code></pre>
+
+    </body>
+</html>

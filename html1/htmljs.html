@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> JavaScript Background Color</title>
+        </head>
+
+        <body>
+
+            <script>
+
+
+ let div = document.createElement ("div");
+
+
+div.innerHTML =`
+<h2>Self Information></h2>
+<p>
+    My name is Pranoti. I am currently studying
+    B.Sc. Comuter Science, III Year.
+    </p>
+
+    
+<p>
+        I am intrested in web development and JavaScript
+        I enjoy learning new technologies and improving
+        my programming skills.
+        </p>
+        
+        <p>
+        my goal is to become a skilled software developer
+        and build useful and creative applications.
+        </p>
+
+        <button onclick ="changeColor('pink')">
+            pink
+            </button>
+
+            <button onclick="changeColor('Black')">
+                Black
+                </button>`;
+
+                div.style.width ="400px";
+                div.style.padding ="30px";
+                div.style.margin = "50px auto";
+                div.style.textAlign ="center";
+                div.style.borderRadius ="15px";
+                div.style.backgroundColor ="White";
+                div.style.color ="black";
+                div.style.boxShadow ="0 0 10px gray";
+
+
+                document.body.appendChild(div);
+
+
+
+
+        function changeColor(color) {
+
+        document.body.style.backgroundColor = color;
+
+        div.style.backgroundColor = color;
+
+        if(color ==="pink") {
+            div.style.color = "blue";
+        } else {
+            div.style.color = "red";
+        }
+    }
+        </script>
+
+        </body>
+</html>
